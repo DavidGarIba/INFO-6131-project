@@ -26,6 +26,7 @@ class GridCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         getData()
+        //collectionView.reloadData()
         collectionView.collectionViewLayout = configLayout()
         configDataSource()
         
@@ -62,8 +63,8 @@ class GridCollectionViewController: UICollectionViewController {
             
             if let MoviePhoto = self.parePhoto(data: data){
                self.photos = MoviePhoto
-                self.countValue = self.photos!.results.count
-               // self.collectionView.reloadData()
+               self.countValue = self.photos!.results.count
+               
                 print(self.photos!.results[0].poster_path)
                 print(self.photos!.results[0].id)
                 print(self.photos!.results.count)
@@ -120,6 +121,8 @@ class GridCollectionViewController: UICollectionViewController {
             
       
             //pass Number of item to label Text
+        
+            
             cell.ItemLabel.text =  "\(self.photos!.results[number].title.capitalized)"
             cell.CellImage.contentMode = .scaleAspectFill
             
