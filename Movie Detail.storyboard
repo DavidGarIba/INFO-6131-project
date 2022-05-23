@@ -16,6 +16,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="NMQ-bA-lBb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="37i-Ws-JPx">
                                 <rect key="frame" x="0.0" y="140" width="414" height="627"/>
                             </imageView>
@@ -25,7 +28,7 @@
                                     <constraint firstAttribute="width" constant="300" id="BRU-LD-0U3"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Q0-Rp-g06">
@@ -33,6 +36,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="qo9-UQ-XhT"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Back"/>
                                 <connections>
@@ -45,6 +49,8 @@
                         <constraints>
                             <constraint firstItem="9Q0-Rp-g06" firstAttribute="top" secondItem="37i-Ws-JPx" secondAttribute="bottom" constant="32" id="9fL-jg-sCI"/>
                             <constraint firstItem="37i-Ws-JPx" firstAttribute="top" secondItem="eTO-pM-mTl" secondAttribute="top" constant="96" id="F8R-MK-EaG"/>
+                            <constraint firstItem="NMQ-bA-lBb" firstAttribute="trailing" secondItem="eTO-pM-mTl" secondAttribute="trailing" id="FZw-ff-wxa"/>
+                            <constraint firstItem="NMQ-bA-lBb" firstAttribute="leading" secondItem="eTO-pM-mTl" secondAttribute="leading" id="IKK-l8-6PV"/>
                             <constraint firstItem="eTO-pM-mTl" firstAttribute="bottom" secondItem="9Q0-Rp-g06" secondAttribute="bottom" constant="17" id="Lbq-eJ-WJ4"/>
                             <constraint firstItem="9Q0-Rp-g06" firstAttribute="centerX" secondItem="rn6-qt-dOw" secondAttribute="centerX" id="Vvb-9f-tOb"/>
                             <constraint firstItem="37i-Ws-JPx" firstAttribute="leading" secondItem="rn6-qt-dOw" secondAttribute="leading" id="YzB-Kl-wLh"/>
@@ -52,6 +58,8 @@
                             <constraint firstItem="1Lr-E7-K8Z" firstAttribute="top" secondItem="eTO-pM-mTl" secondAttribute="top" constant="11" id="bq1-xV-wdh"/>
                             <constraint firstItem="37i-Ws-JPx" firstAttribute="centerX" secondItem="rn6-qt-dOw" secondAttribute="centerX" id="fKQ-rb-Jdh"/>
                             <constraint firstItem="1Lr-E7-K8Z" firstAttribute="centerX" secondItem="rn6-qt-dOw" secondAttribute="centerX" id="iqa-eK-MLF"/>
+                            <constraint firstAttribute="bottom" secondItem="NMQ-bA-lBb" secondAttribute="bottom" id="jUh-cg-M98"/>
+                            <constraint firstItem="NMQ-bA-lBb" firstAttribute="top" secondItem="rn6-qt-dOw" secondAttribute="top" id="une-GE-2aN"/>
                             <constraint firstItem="eTO-pM-mTl" firstAttribute="bottom" secondItem="1Lr-E7-K8Z" secondAttribute="bottom" constant="716" id="w5m-64-gk6"/>
                         </constraints>
                     </view>
@@ -66,6 +74,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="0" width="360" height="640"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
