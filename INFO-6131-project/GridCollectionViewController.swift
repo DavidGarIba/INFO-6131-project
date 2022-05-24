@@ -13,7 +13,6 @@ class GridCollectionViewController: UICollectionViewController {
    
        
     var photos: Photo?
-    var countValue: Int?
     var IDNumber: Int?
     
     enum section {
@@ -26,10 +25,10 @@ class GridCollectionViewController: UICollectionViewController {
         super.viewDidLoad()
         
         getData()
-        //collectionView.reloadData()
+        
         collectionView.collectionViewLayout = configLayout()
         configDataSource()
-        
+        collectionView.reloadData()
         //print(self.photos?.results.count)
     }
     
@@ -62,13 +61,14 @@ class GridCollectionViewController: UICollectionViewController {
       
             
             if let MoviePhoto = self.parePhoto(data: data){
+            
+                    
                self.photos = MoviePhoto
-               self.countValue = self.photos!.results.count
                
                 print(self.photos!.results[0].poster_path)
                 print(self.photos!.results[0].id)
-                print(self.photos!.results.count)
-            
+                //print(self.photos!.results.count)
+               
             }
         }
         dataTask.resume()
@@ -105,9 +105,13 @@ class GridCollectionViewController: UICollectionViewController {
         
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 1
+  
         
         return UICollectionViewCompositionalLayout(section: section)
     }
+    
+   
+
     
     func configDataSource(){
         
@@ -123,13 +127,15 @@ class GridCollectionViewController: UICollectionViewController {
             //pass Number of item to label Text
         
             
-            cell.ItemLabel.text =  "\(self.photos!.results[number].title.capitalized)"
-            cell.CellImage.contentMode = .scaleAspectFill
+                cell.ItemLabel.text =  "\(self.photos?.results[number].title.capitalized ?? "error")"
+                cell.CellImage.contentMode = .scaleAspectFill
+                
+                let defaultLink = "https://image.tmdb.org/t/p/w500/"
+                let completeLink = defaultLink + (self.photos?.results[number].poster_path ?? "error")
+                
+                cell.CellImage.downloaded(from: completeLink)
+        
             
-            let defaultLink = "https://image.tmdb.org/t/p/w500/"
-            let completeLink = defaultLink + self.photos!.results[number].poster_path
-            
-            cell.CellImage.downloaded(from: completeLink)
             
             return cell
         }
