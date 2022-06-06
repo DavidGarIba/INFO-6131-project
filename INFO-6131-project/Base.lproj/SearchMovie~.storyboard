@@ -3,12 +3,13 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List-->
+        <!--Item-->
         <scene sceneID="XjN-O1-qPE">
             <objects>
                 <collectionViewController id="xNU-GU-x6o" customClass="GridCollectionViewController" customModule="INFO_6131_project" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +66,7 @@
                             <outlet property="delegate" destination="xNU-GU-x6o" id="17c-pY-SX7"/>
                         </connections>
                     </collectionView>
-                    <tabBarItem key="tabBarItem" title="List" image="person.crop.rectangle.fill" catalog="system" id="433-0q-Q2w"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="person.crop.rectangle.fill" catalog="system" id="433-0q-Q2w"/>
                     <connections>
                         <segue destination="GYj-h1-NAu" kind="presentation" identifier="goToNextPage" id="Iq3-Ml-vse"/>
                     </connections>
@@ -94,29 +95,60 @@
                     </tabBar>
                     <connections>
                         <segue destination="xNU-GU-x6o" kind="relationship" relationship="viewControllers" id="dRF-l7-HsZ"/>
-                        <segue destination="4S1-Dy-F2X" kind="relationship" relationship="viewControllers" id="C86-o6-ZkA"/>
+                        <segue destination="KHh-Nb-ulV" kind="relationship" relationship="viewControllers" id="cuf-DZ-tru"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XHf-bK-PGr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-920.28985507246387" y="-252.45535714285714"/>
         </scene>
-        <!--Search-->
-        <scene sceneID="KcS-Si-MVe">
+        <!--Item-->
+        <scene sceneID="ek4-RK-Bfi">
             <objects>
-                <viewControllerPlaceholder storyboardName="Search" id="4S1-Dy-F2X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="25g-x5-3Dn"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wh0-L1-rwY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="KHh-Nb-ulV" customClass="SearchViewController" customModule="INFO_6131_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mgs-4f-6aB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VCW-tL-65B">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="4ae-9V-Zf9">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4ae-9V-Zf9" id="5IN-JH-OSZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KHh-Nb-ulV" id="qKN-wG-Zeb"/>
+                                    <outlet property="delegate" destination="KHh-Nb-ulV" id="o0Y-8Y-fzQ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kt1-6n-cN6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" image="magnifyingglass" catalog="system" id="WKn-c3-Gth"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mt4-6Y-jT6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-920.28985507246387" y="525.66964285714289"/>
+            <point key="canvasLocation" x="-920" y="565"/>
         </scene>
     </scenes>
     <resources>
         <image name="0" width="360" height="640"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.crop.rectangle.fill" catalog="system" width="128" height="93"/>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>

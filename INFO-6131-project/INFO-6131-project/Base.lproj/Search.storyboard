@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yv5-fJ-NSY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Detail-->
+        <scene sceneID="MS7-LH-9nQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Movie Detail" id="GYj-h1-NAu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNT-xa-LZQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892.75362318840587" y="-241.07142857142856"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="2Iy-gf-3rn">
+            <objects>
+                <viewController id="yv5-fJ-NSY" customClass="SearchViewController" customModule="INFO_6131_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o6c-Yc-3ye">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="DDx-Gw-ncq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="O8V-tX-DuX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="Bet-Wj-eqk">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bet-Wj-eqk" id="xo9-AV-LiA">
+                                            <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="yv5-fJ-NSY" id="WRa-oE-4FF"/>
+                                    <outlet property="delegate" destination="yv5-fJ-NSY" id="GqM-qj-3MF"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVN-yX-BMI">
+                                <rect key="frame" x="347" y="44" width="67" height="80"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear"/>
+                                <connections>
+                                    <action selector="clearBtn:" destination="yv5-fJ-NSY" eventType="touchUpInside" id="lVF-Xv-vQZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vm6-aD-HTo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DDx-Gw-ncq" secondAttribute="bottom" id="7yG-5k-KnT"/>
+                            <constraint firstItem="rVN-yX-BMI" firstAttribute="trailing" secondItem="vm6-aD-HTo" secondAttribute="trailing" id="8gT-cz-QzJ"/>
+                            <constraint firstItem="DDx-Gw-ncq" firstAttribute="trailing" secondItem="vm6-aD-HTo" secondAttribute="trailing" id="9pe-ql-pOH"/>
+                            <constraint firstItem="rVN-yX-BMI" firstAttribute="leading" secondItem="vm6-aD-HTo" secondAttribute="leading" constant="347" id="Re2-ry-8OK"/>
+                            <constraint firstItem="DDx-Gw-ncq" firstAttribute="leading" secondItem="vm6-aD-HTo" secondAttribute="leading" id="UvG-a5-lEz"/>
+                            <constraint firstItem="DDx-Gw-ncq" firstAttribute="top" secondItem="o6c-Yc-3ye" secondAttribute="top" id="W2t-OL-gkx"/>
+                            <constraint firstItem="vm6-aD-HTo" firstAttribute="bottom" secondItem="rVN-yX-BMI" secondAttribute="bottom" constant="738" id="g5F-ZZ-Gdf"/>
+                            <constraint firstItem="O8V-tX-DuX" firstAttribute="trailing" secondItem="vm6-aD-HTo" secondAttribute="trailing" id="ggD-Ai-xH5"/>
+                            <constraint firstItem="O8V-tX-DuX" firstAttribute="bottom" secondItem="vm6-aD-HTo" secondAttribute="bottom" id="i4z-Vk-3FI"/>
+                            <constraint firstItem="O8V-tX-DuX" firstAttribute="leading" secondItem="vm6-aD-HTo" secondAttribute="leading" id="umc-D1-edK"/>
+                            <constraint firstItem="O8V-tX-DuX" firstAttribute="top" secondItem="vm6-aD-HTo" secondAttribute="top" id="w00-tx-gC7"/>
+                            <constraint firstItem="rVN-yX-BMI" firstAttribute="top" secondItem="vm6-aD-HTo" secondAttribute="top" id="xwQ-Hd-FLx"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="4hK-J8-f9x"/>
+                    <connections>
+                        <outlet property="tableView" destination="O8V-tX-DuX" id="xws-8F-3df"/>
+                        <segue destination="GYj-h1-NAu" kind="presentation" identifier="goToNextPage" id="yjm-Nb-x67"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqC-jP-NGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-920.28985507246387" y="525.66964285714289"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="0" width="360" height="640"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -14,6 +14,8 @@ class GridCollectionViewController: UICollectionViewController {
        
     var photos: Photo?
     var IDNumber: Int?
+    var DataStore = dataStore.shared
+ 
     
     enum section {
         case main
@@ -24,7 +26,7 @@ class GridCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getData()
+        fetchData()
         
         collectionView.collectionViewLayout = configLayout()
         configDataSource()
@@ -37,58 +39,30 @@ class GridCollectionViewController: UICollectionViewController {
             // Dispose of any resources that can be recreated.
         }
     
-    func getData(){
-        
-        let url = URL(string: "https://api.themoviedb.org/3/movie/popular?api_key=8a124cde088692dc4490768ab0797e71&language=en-US&page=1")
-        guard let url = url else {
-            print("Could not get URL")
-            return
-        }
 
-        let session = URLSession.shared
-        
-        let dataTask = session.dataTask(with: url) { data, response, error in
-            print("network call complete")
-                        
-                        guard error == nil else{
-                            print("error")
-                            return
-                        }
-                        guard let data = data else{
-                            print("no data found")
-                            return
-                        }
-      
-            
-            if let MoviePhoto = self.parePhoto(data: data){
-            
+    
+    
+    private func fetchData() {
+        DataStore.getData( hostURl:"api.themoviedb.org" ,path: "/3/movie/popular", params: ["language" :"en-US" , "page" : "1"], completion: { (result) in
+            switch result {
+                case .success(let result):
+                
+                    self.photos = result
+                    self.collectionView.reloadData()
+                    break
                     
-               self.photos = MoviePhoto
-               
-                print(self.photos!.results[0].poster_path)
-                print(self.photos!.results[0].id)
-                //print(self.photos!.results.count)
-               
+                case .failure(let error):
+                    print(error)
+                    
+                    break;
             }
-        }
-        dataTask.resume()
+            
+        })
+        
     }
     
-    private func parePhoto(data:Data) -> Photo? // WeatherIconResponse array data type
-        {
-            let decoder = JSONDecoder()
-            var photo: Photo?
-            do {
-                photo = try decoder.decode(Photo?.self, from: data)
-            }
-            catch
-            {
-                print("error parsing weather")
-                print(error)
-            }
-            
-            return photo
-        }
+    
+    
     
     private func configLayout() -> UICollectionViewCompositionalLayout {
         //declare size of the item
