@@ -105,6 +105,7 @@ class SearchViewController: UIViewController {
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             self.idCell = items[indexPath.row].id
             self.performSegue(withIdentifier: "goToNextPage", sender: self)
+            
         }
         
     }

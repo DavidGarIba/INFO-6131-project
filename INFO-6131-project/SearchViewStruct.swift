@@ -17,5 +17,5 @@ struct SearchDetail: Decodable {
 }
 
 let NullableList = [
-    SearchDetail(id: 0, original_title: "Please enter to search bar to find movie" )
+    SearchDetail(id: 0, original_title: "" )
 ]
