@@ -13,6 +13,8 @@
 		3B07EE2A284DC6690003B172 /* dataStoreSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07EE29284DC6690003B172 /* dataStoreSearchViewController.swift */; };
 		3B07EE2F284DC8A30003B172 /* SearchViewStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07EE2E284DC8A30003B172 /* SearchViewStruct.swift */; };
 		3B07EE35284E88B10003B172 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B07EE33284E88B10003B172 /* Search.storyboard */; };
+		3B28F7E9284F9EA3003CCAC6 /* dataStoreDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B28F7E8284F9EA3003CCAC6 /* dataStoreDirector.swift */; };
+		3B28F7EB284F9EBF003CCAC6 /* DirectorStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B28F7EA284F9EBF003CCAC6 /* DirectorStruct.swift */; };
 		3B5E20EE283A0282009BF2F2 /* GridCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E20ED283A0282009BF2F2 /* GridCollectionViewController.swift */; };
 		3B5E20F0283A032A009BF2F2 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E20EF283A032A009BF2F2 /* ItemCollectionViewCell.swift */; };
 		3B5E20F2283A87FB009BF2F2 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E20F1283A87FA009BF2F2 /* Photo.swift */; };
@@ -33,6 +35,8 @@
 		3B07EE29284DC6690003B172 /* dataStoreSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStoreSearchViewController.swift; sourceTree = "<group>"; };
 		3B07EE2E284DC8A30003B172 /* SearchViewStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewStruct.swift; sourceTree = "<group>"; };
 		3B07EE34284E88B10003B172 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "INFO-6131-project/Base.lproj/Search.storyboard"; sourceTree = "<group>"; };
+		3B28F7E8284F9EA3003CCAC6 /* dataStoreDirector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStoreDirector.swift; sourceTree = "<group>"; };
+		3B28F7EA284F9EBF003CCAC6 /* DirectorStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectorStruct.swift; sourceTree = "<group>"; };
 		3B5E20ED283A0282009BF2F2 /* GridCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCollectionViewController.swift; sourceTree = "<group>"; };
 		3B5E20EF283A032A009BF2F2 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		3B5E20F1283A87FA009BF2F2 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -93,9 +97,11 @@
 				3B5E20F1283A87FA009BF2F2 /* Photo.swift */,
 				3B5E20F5283BA44C009BF2F2 /* MovieDetailStruct.swift */,
 				3B07EE2E284DC8A30003B172 /* SearchViewStruct.swift */,
+				3B28F7EA284F9EBF003CCAC6 /* DirectorStruct.swift */,
 				3B07EE23284C73290003B172 /* dataStore.swift */,
 				3B07EE25284C96460003B172 /* dataStoreMovieDetailView.swift */,
 				3B07EE29284DC6690003B172 /* dataStoreSearchViewController.swift */,
+				3B28F7E8284F9EA3003CCAC6 /* dataStoreDirector.swift */,
 			);
 			path = "INFO-6131-project";
 			sourceTree = "<group>";
@@ -180,10 +186,12 @@
 				3B07EE24284C73290003B172 /* dataStore.swift in Sources */,
 				6331207A28357B510042220E /* AppDelegate.swift in Sources */,
 				3B5E20F0283A032A009BF2F2 /* ItemCollectionViewCell.swift in Sources */,
+				3B28F7E9284F9EA3003CCAC6 /* dataStoreDirector.swift in Sources */,
 				3B5E20F6283BA44C009BF2F2 /* MovieDetailStruct.swift in Sources */,
 				3B5E20EE283A0282009BF2F2 /* GridCollectionViewController.swift in Sources */,
 				3B07EE2A284DC6690003B172 /* dataStoreSearchViewController.swift in Sources */,
 				6331207C28357B510042220E /* SceneDelegate.swift in Sources */,
+				3B28F7EB284F9EBF003CCAC6 /* DirectorStruct.swift in Sources */,
 				3B5E20F2283A87FB009BF2F2 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
