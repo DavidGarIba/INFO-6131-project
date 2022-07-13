@@ -39,7 +39,11 @@ class GridCollectionViewController: UICollectionViewController {
             // Dispose of any resources that can be recreated.
         }
     
-
+    func Alert(Content: String){
+        let alert = UIAlertController(title: "Alert Title", message: "\(Content)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
     
     
     private func fetchData() {
@@ -52,17 +56,12 @@ class GridCollectionViewController: UICollectionViewController {
                     break
                     
                 case .failure(let error):
-                    print(error)
+                self.Alert(Content:"\(error)")
                     
                     break;
             }
-            
         })
-        
     }
-    
-    
-    
     
     private func configLayout() -> UICollectionViewCompositionalLayout {
         //declare size of the item

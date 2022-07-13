@@ -25,6 +25,12 @@ class SearchViewController: UIViewController {
             customSearchController()
      
         }
+    func Alert(Content: String){
+        let alert = UIAlertController(title: "Alert Title", message: "\(Content)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func clearBtn(_ sender: UIButton) {
         searchController.searchBar.text = ""
         self.tableView.reloadData()
@@ -44,7 +50,7 @@ class SearchViewController: UIViewController {
                     break
                     
                 case .failure(let error):
-                    print(error)
+                self.Alert(Content:"\(error)")
                     
                     break;
             }

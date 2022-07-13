@@ -1,20 +1,19 @@
 //
-//  dataStoreMovieDetailView.swift
+//  dataStoreMarkFavourite.swift
 //  INFO-6131-project
 //
-//  Created by Anh Dinh Le on 2022-06-05.
+//  Created by Anh Dinh Le on 2022-07-12.
 //
 
 import Foundation
-
-class dataStoreMovieDetailView {
+class dataStoreMarkFavourite {
     
-    static let shared =  dataStoreMovieDetailView()
+    static let shared =  dataStoreMarkFavourite()
     
     private let urlSession = URLSession.shared
     private let apikey = "8a124cde088692dc4490768ab0797e71"
 
-    
+
     func createURLComponents(host:String,path:String,queryItems: [URLQueryItem]?) -> URLComponents? {
         var components = URLComponents()
         components.scheme = "https"
@@ -26,7 +25,7 @@ class dataStoreMovieDetailView {
     
     
     //Get photo data function
-    func getData( hostURl:String ,path: String, params: [String: String]?, completion: @escaping (Result<MovieDetailStruct?, Error>) -> Void){
+    func getData( hostURl:String ,path: String, params: [String: String]?, mediaID:Int, completion: @escaping (Result<markFavouriteStruct?, Error>) -> Void){
         
         //get parameters
         var queryItems = [URLQueryItem(name: "api_key", value: apikey)]
@@ -48,18 +47,28 @@ class dataStoreMovieDetailView {
             
             return
         }
-        
-        //Create URL Request
-        var request = URLRequest(url:validURL)
-        
-        //specify Get HTTP method
-        request.httpMethod = "GET"
-        
+            
+        let parameters = markFavouriteEncodeStruct(
+                media_type: "movie",
+                media_id: mediaID,
+                favorite: true
+            )
+            let encoder = JSONEncoder()
+            let body = try? encoder.encode(parameters)
+            var request = URLRequest(url:validURL)
+            request.httpBody = body
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            //print(String(data: data, encoding: .utf8)!)
+ 
+       
         urlSession.dataTask(with: request) { (data, response, error) in
-            //test http responce is between 200..<= 299 this'..<' opratoer called range opratoer
+            // test http responce is between 200..<= 299 this'..<' opratoer called range opratoer
             guard let httpResponse = response as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {
-                return
-            }
+               return
+             }
+          
+            
             //test data is valid
             guard let data = data else {
                 completion(.failure(error!))
@@ -69,7 +78,7 @@ class dataStoreMovieDetailView {
             //this is how we do try catch block is swift to prevent app from hard crash
             do {
                 let decoder = JSONDecoder()
-                let returnStakeholder = try decoder.decode(MovieDetailStruct?.self, from: data)
+                let returnStakeholder = try decoder.decode(markFavouriteStruct?.self, from: data)
                 DispatchQueue.main.async {
                     completion(.success(returnStakeholder))
                 }
@@ -81,4 +90,3 @@ class dataStoreMovieDetailView {
         }.resume()
     }
 }
-

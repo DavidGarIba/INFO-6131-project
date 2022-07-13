@@ -11,7 +11,7 @@
         <!--Movie Detail View-->
         <scene sceneID="irQ-pQ-uRh">
             <objects>
-                <viewController id="J7r-62-5iG" customClass="MovieDetailView" customModule="INFO_6131_project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetail" id="J7r-62-5iG" customClass="MovieDetailView" customModule="INFO_6131_project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rn6-qt-dOw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,17 +93,35 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vna-Wu-Mav">
+                                <rect key="frame" x="301" y="567" width="56" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="addFavourite:" destination="J7r-62-5iG" eventType="touchUpInside" id="s7P-DN-Gwk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xH6-1K-1ev">
+                                <rect key="frame" x="282" y="567" width="38" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="RemoveFavourite:" destination="J7r-62-5iG" eventType="touchUpInside" id="rn8-so-Kdk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eTO-pM-mTl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eTO-pM-mTl" firstAttribute="trailing" secondItem="aga-fX-UY7" secondAttribute="trailing" constant="41" id="1Y4-Jp-gUa"/>
                             <constraint firstItem="aga-fX-UY7" firstAttribute="leading" secondItem="eTO-pM-mTl" secondAttribute="leading" constant="44" id="4kP-Kv-hQ6"/>
+                            <constraint firstItem="vna-Wu-Mav" firstAttribute="leading" secondItem="4K9-Yr-Yct" secondAttribute="trailing" constant="166" id="F7K-Cb-DV3"/>
                             <constraint firstItem="NMQ-bA-lBb" firstAttribute="trailing" secondItem="eTO-pM-mTl" secondAttribute="trailing" id="FZw-ff-wxa"/>
                             <constraint firstItem="KXu-Cl-sX8" firstAttribute="top" secondItem="aga-fX-UY7" secondAttribute="bottom" constant="44" id="Fkj-NY-5t1"/>
                             <constraint firstItem="KXu-Cl-sX8" firstAttribute="leading" secondItem="aga-fX-UY7" secondAttribute="leading" id="GnW-pI-bPe"/>
                             <constraint firstItem="KXu-Cl-sX8" firstAttribute="top" secondItem="4gj-p7-2nd" secondAttribute="bottom" constant="8" id="Gua-KO-apz"/>
                             <constraint firstItem="NMQ-bA-lBb" firstAttribute="leading" secondItem="eTO-pM-mTl" secondAttribute="leading" id="IKK-l8-6PV"/>
+                            <constraint firstItem="vna-Wu-Mav" firstAttribute="top" secondItem="37i-Ws-JPx" secondAttribute="bottom" constant="30" id="KHa-8d-fRd"/>
                             <constraint firstItem="4K9-Yr-Yct" firstAttribute="leading" secondItem="eTO-pM-mTl" secondAttribute="leading" constant="44" id="KLn-DS-07e"/>
                             <constraint firstItem="4gj-p7-2nd" firstAttribute="leading" secondItem="eTO-pM-mTl" secondAttribute="leading" constant="44" id="L75-7Z-ria"/>
                             <constraint firstItem="FDk-Tm-Anf" firstAttribute="leading" secondItem="KXu-Cl-sX8" secondAttribute="trailing" constant="29" id="LSv-0C-ApS"/>
@@ -111,6 +129,7 @@
                             <constraint firstItem="FDk-Tm-Anf" firstAttribute="leading" secondItem="KXu-Cl-sX8" secondAttribute="trailing" constant="29" id="M0a-Hh-lw5"/>
                             <constraint firstItem="Qrf-I3-mhd" firstAttribute="top" secondItem="37i-Ws-JPx" secondAttribute="bottom" constant="194" id="M4f-7N-rHT"/>
                             <constraint firstItem="KXu-Cl-sX8" firstAttribute="top" secondItem="4gj-p7-2nd" secondAttribute="bottom" constant="8" id="RBx-5s-7jz"/>
+                            <constraint firstItem="xH6-1K-1ev" firstAttribute="leading" secondItem="4K9-Yr-Yct" secondAttribute="trailing" constant="147" id="S18-ij-rkt"/>
                             <constraint firstItem="4K9-Yr-Yct" firstAttribute="top" secondItem="37i-Ws-JPx" secondAttribute="bottom" constant="37" id="Ssb-eI-co5"/>
                             <constraint firstItem="Qrf-I3-mhd" firstAttribute="leading" secondItem="4gj-p7-2nd" secondAttribute="trailing" constant="8" id="Tfl-Wk-SA6"/>
                             <constraint firstItem="eTO-pM-mTl" firstAttribute="trailing" secondItem="Qrf-I3-mhd" secondAttribute="trailing" constant="118" id="U6f-CM-EHw"/>
@@ -121,12 +140,15 @@
                             <constraint firstItem="KXu-Cl-sX8" firstAttribute="leading" secondItem="4gj-p7-2nd" secondAttribute="leading" id="ZMM-ya-imK"/>
                             <constraint firstItem="1Lr-E7-K8Z" firstAttribute="top" secondItem="eTO-pM-mTl" secondAttribute="top" constant="11" id="bq1-xV-wdh"/>
                             <constraint firstItem="37i-Ws-JPx" firstAttribute="centerX" secondItem="rn6-qt-dOw" secondAttribute="centerX" id="fKQ-rb-Jdh"/>
+                            <constraint firstItem="eTO-pM-mTl" firstAttribute="trailing" secondItem="xH6-1K-1ev" secondAttribute="trailing" constant="94" id="fUf-Z1-mNF"/>
                             <constraint firstItem="1Lr-E7-K8Z" firstAttribute="centerX" secondItem="rn6-qt-dOw" secondAttribute="centerX" id="iqa-eK-MLF"/>
                             <constraint firstItem="FDk-Tm-Anf" firstAttribute="leading" secondItem="KXu-Cl-sX8" secondAttribute="trailing" constant="29" id="itn-5P-Hsf"/>
                             <constraint firstAttribute="bottom" secondItem="NMQ-bA-lBb" secondAttribute="bottom" id="jUh-cg-M98"/>
+                            <constraint firstItem="eTO-pM-mTl" firstAttribute="trailing" secondItem="vna-Wu-Mav" secondAttribute="trailing" constant="57" id="kF3-cb-kUw"/>
                             <constraint firstItem="KXu-Cl-sX8" firstAttribute="leading" secondItem="eTO-pM-mTl" secondAttribute="leading" constant="44" id="kcJ-GB-skg"/>
                             <constraint firstItem="FDk-Tm-Anf" firstAttribute="top" secondItem="4gj-p7-2nd" secondAttribute="bottom" constant="19.5" id="l7h-ET-sL8"/>
                             <constraint firstItem="eTO-pM-mTl" firstAttribute="trailing" secondItem="FDk-Tm-Anf" secondAttribute="trailing" constant="233" id="mFg-p5-hjO"/>
+                            <constraint firstItem="xH6-1K-1ev" firstAttribute="top" secondItem="37i-Ws-JPx" secondAttribute="bottom" constant="30" id="nPM-7n-JZB"/>
                             <constraint firstItem="aga-fX-UY7" firstAttribute="top" secondItem="4K9-Yr-Yct" secondAttribute="bottom" constant="26" id="oLF-ft-AQG"/>
                             <constraint firstItem="eTO-pM-mTl" firstAttribute="trailing" secondItem="4K9-Yr-Yct" secondAttribute="trailing" constant="279" id="qAL-UY-TEf"/>
                             <constraint firstItem="aga-fX-UY7" firstAttribute="top" secondItem="4K9-Yr-Yct" secondAttribute="bottom" constant="26" id="uHF-3k-DBP"/>
@@ -143,15 +165,26 @@
                         <outlet property="directorLabel" destination="Qrf-I3-mhd" id="gek-WE-fOx"/>
                         <outlet property="overViewLabel" destination="aga-fX-UY7" id="pz9-Yl-0TY"/>
                         <outlet property="rateLabel" destination="FDk-Tm-Anf" id="EKO-ao-l1a"/>
+                        <segue destination="vdD-DE-wAr" kind="presentation" identifier="goToNextPage" id="7rG-tQ-WED"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2m-KK-FIh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="-241.07142857142856"/>
         </scene>
+        <!--Favourite-->
+        <scene sceneID="AEr-A8-ciS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Favourite" id="vdD-DE-wAr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3d0-2w-mZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="-317"/>
+        </scene>
     </scenes>
     <resources>
         <image name="0" width="360" height="640"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
