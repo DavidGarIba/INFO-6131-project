@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -109,12 +110,24 @@
                                     <action selector="RemoveFavourite:" destination="J7r-62-5iG" eventType="touchUpInside" id="rn8-so-Kdk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeZ-w5-yTw">
+                                <rect key="frame" x="57" y="140" width="300" height="397"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" buttonSize="large">
+                                    <imageReference key="image" image="play.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="playVideoButton:" destination="J7r-62-5iG" eventType="touchUpInside" id="z0H-GE-unf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eTO-pM-mTl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eTO-pM-mTl" firstAttribute="trailing" secondItem="aga-fX-UY7" secondAttribute="trailing" constant="41" id="1Y4-Jp-gUa"/>
                             <constraint firstItem="aga-fX-UY7" firstAttribute="leading" secondItem="eTO-pM-mTl" secondAttribute="leading" constant="44" id="4kP-Kv-hQ6"/>
+                            <constraint firstItem="aga-fX-UY7" firstAttribute="top" secondItem="CeZ-w5-yTw" secondAttribute="bottom" constant="87" id="Ege-LE-LGg"/>
                             <constraint firstItem="vna-Wu-Mav" firstAttribute="leading" secondItem="4K9-Yr-Yct" secondAttribute="trailing" constant="166" id="F7K-Cb-DV3"/>
                             <constraint firstItem="NMQ-bA-lBb" firstAttribute="trailing" secondItem="eTO-pM-mTl" secondAttribute="trailing" id="FZw-ff-wxa"/>
                             <constraint firstItem="KXu-Cl-sX8" firstAttribute="top" secondItem="aga-fX-UY7" secondAttribute="bottom" constant="44" id="Fkj-NY-5t1"/>
@@ -126,6 +139,7 @@
                             <constraint firstItem="4gj-p7-2nd" firstAttribute="leading" secondItem="eTO-pM-mTl" secondAttribute="leading" constant="44" id="L75-7Z-ria"/>
                             <constraint firstItem="FDk-Tm-Anf" firstAttribute="leading" secondItem="KXu-Cl-sX8" secondAttribute="trailing" constant="29" id="LSv-0C-ApS"/>
                             <constraint firstItem="eTO-pM-mTl" firstAttribute="bottom" secondItem="9Q0-Rp-g06" secondAttribute="bottom" constant="17" id="Lbq-eJ-WJ4"/>
+                            <constraint firstItem="CeZ-w5-yTw" firstAttribute="leading" secondItem="eTO-pM-mTl" secondAttribute="leading" constant="57" id="LwR-cT-wKw"/>
                             <constraint firstItem="FDk-Tm-Anf" firstAttribute="leading" secondItem="KXu-Cl-sX8" secondAttribute="trailing" constant="29" id="M0a-Hh-lw5"/>
                             <constraint firstItem="Qrf-I3-mhd" firstAttribute="top" secondItem="37i-Ws-JPx" secondAttribute="bottom" constant="194" id="M4f-7N-rHT"/>
                             <constraint firstItem="KXu-Cl-sX8" firstAttribute="top" secondItem="4gj-p7-2nd" secondAttribute="bottom" constant="8" id="RBx-5s-7jz"/>
@@ -134,6 +148,7 @@
                             <constraint firstItem="Qrf-I3-mhd" firstAttribute="leading" secondItem="4gj-p7-2nd" secondAttribute="trailing" constant="8" id="Tfl-Wk-SA6"/>
                             <constraint firstItem="eTO-pM-mTl" firstAttribute="trailing" secondItem="Qrf-I3-mhd" secondAttribute="trailing" constant="118" id="U6f-CM-EHw"/>
                             <constraint firstItem="Qrf-I3-mhd" firstAttribute="leading" secondItem="4gj-p7-2nd" secondAttribute="trailing" constant="8" id="UYy-Ap-gkt"/>
+                            <constraint firstItem="CeZ-w5-yTw" firstAttribute="top" secondItem="1Lr-E7-K8Z" secondAttribute="bottom" constant="-6" id="Vs7-Sf-I3z"/>
                             <constraint firstItem="9Q0-Rp-g06" firstAttribute="centerX" secondItem="rn6-qt-dOw" secondAttribute="centerX" id="Vvb-9f-tOb"/>
                             <constraint firstItem="KXu-Cl-sX8" firstAttribute="centerY" secondItem="FDk-Tm-Anf" secondAttribute="centerY" id="XcJ-F5-jfM"/>
                             <constraint firstItem="37i-Ws-JPx" firstAttribute="leading" secondItem="rn6-qt-dOw" secondAttribute="leading" id="YzB-Kl-wLh"/>
@@ -150,6 +165,7 @@
                             <constraint firstItem="eTO-pM-mTl" firstAttribute="trailing" secondItem="FDk-Tm-Anf" secondAttribute="trailing" constant="233" id="mFg-p5-hjO"/>
                             <constraint firstItem="xH6-1K-1ev" firstAttribute="top" secondItem="37i-Ws-JPx" secondAttribute="bottom" constant="30" id="nPM-7n-JZB"/>
                             <constraint firstItem="aga-fX-UY7" firstAttribute="top" secondItem="4K9-Yr-Yct" secondAttribute="bottom" constant="26" id="oLF-ft-AQG"/>
+                            <constraint firstItem="eTO-pM-mTl" firstAttribute="trailing" secondItem="CeZ-w5-yTw" secondAttribute="trailing" constant="57" id="pFN-Gq-N4o"/>
                             <constraint firstItem="eTO-pM-mTl" firstAttribute="trailing" secondItem="4K9-Yr-Yct" secondAttribute="trailing" constant="279" id="qAL-UY-TEf"/>
                             <constraint firstItem="aga-fX-UY7" firstAttribute="top" secondItem="4K9-Yr-Yct" secondAttribute="bottom" constant="26" id="uHF-3k-DBP"/>
                             <constraint firstItem="NMQ-bA-lBb" firstAttribute="top" secondItem="rn6-qt-dOw" secondAttribute="top" id="une-GE-2aN"/>
@@ -178,13 +194,14 @@
                 <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="Favourite" id="vdD-DE-wAr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3d0-2w-mZV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="-317"/>
+            <point key="canvasLocation" x="499" y="-349"/>
         </scene>
     </scenes>
     <resources>
         <image name="0" width="360" height="640"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

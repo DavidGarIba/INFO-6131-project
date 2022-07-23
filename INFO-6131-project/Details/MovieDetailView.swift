@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import AVKit
+import XCDYouTubeKit
+
 
 
 class MovieDetailView: UIViewController {
@@ -17,6 +20,7 @@ class MovieDetailView: UIViewController {
     var DataStoreDirector = dataStoreDirector.shared
     var DataStoreMarkFavourite = dataStoreMarkFavourite.shared
     var DataStoreMarkFavouriteFailed = dataStoreMarkFavouriteFailed.shared
+    var DataStorePlayVideo = dataStorePlayVideo.shared
     
     var Director = [Directing]()
     
@@ -48,6 +52,62 @@ class MovieDetailView: UIViewController {
         let alert = UIAlertController(title: "Alert Title", message: "\(Content)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func playVideoButton(_ sender: UIButton) {
+        
+        DataStorePlayVideo.getData( hostURl:"api.themoviedb.org" ,path: "/3/movie/\(ID!)/videos", params: nil, completion: { (result) in
+            switch result {
+                case .success(let result):
+                
+                guard let result = result else{
+                    print("no data found")
+                    return
+                }
+                print(result.results[0].key)
+                self.videoHandle(Key: result.results[0].key)
+                    
+                case .failure(let error):
+                self.Alert(Content:"\(error)")
+                    
+                    break;
+            }
+            
+        })
+        
+    }
+    
+    func videoHandle(Key: String){
+        let playerVC = AVPlayerViewController()
+        present(playerVC, animated: true, completion: nil)
+        XCDYouTubeClient.default().getVideoWithIdentifier(Key) {[weak self, weak playerVC] (video, error) in
+            if let _ = error {
+                self?.dismiss(animated: true, completion: nil)
+                return
+            }
+            guard let video = video else {
+                self?.dismiss(animated: true,completion: nil)
+                return
+            }
+            
+            let streamURL: URL
+            if let url = video.streamURLs[XCDYouTubeVideoQuality.HD720.rawValue] {
+                streamURL = url
+            }else if let url = video.streamURLs[XCDYouTubeVideoQuality.medium360.rawValue]{
+                streamURL = url
+            }else if let url = video.streamURLs[XCDYouTubeVideoQuality.small240.rawValue]{
+                streamURL = url
+            }else if let urlDict = video.streamURLs.first {
+                streamURL = urlDict.value
+            }else {
+                self?.dismiss(animated: true,completion: nil)
+                return
+            }
+            
+            playerVC?.player = AVPlayer(url: streamURL)
+            playerVC?.player?.play()
+            
+        }
     }
     
     @IBAction func addFavourite(_ sender: UIButton) {

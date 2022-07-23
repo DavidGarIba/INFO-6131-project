@@ -21,6 +21,7 @@
 		3B5E20F4283BA095009BF2F2 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E20F3283BA094009BF2F2 /* MovieDetailView.swift */; };
 		3B5E20F6283BA44C009BF2F2 /* MovieDetailStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E20F5283BA44C009BF2F2 /* MovieDetailStruct.swift */; };
 		3B5E20F8283BAACD009BF2F2 /* Movie Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5E20F7283BAACD009BF2F2 /* Movie Detail.storyboard */; };
+		3B8B31DE288BCD5500577CF7 /* XCDYouTubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B8B31DD288BCD5500577CF7 /* XCDYouTubeKit */; };
 		3BD9BE03287CC8FA00F0B745 /* favouriteMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9BE02287CC8FA00F0B745 /* favouriteMoviesViewController.swift */; };
 		3BD9BE05287CD3CE00F0B745 /* ItemFavouriteCollectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9BE04287CD3CE00F0B745 /* ItemFavouriteCollectionCollectionViewCell.swift */; };
 		3BD9BE07287CD41900F0B745 /* dataStoreFavourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9BE06287CD41900F0B745 /* dataStoreFavourite.swift */; };
@@ -32,6 +33,8 @@
 		3BD9BE25287E478A00F0B745 /* Favorite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BD9BE23287E478A00F0B745 /* Favorite.storyboard */; };
 		3BD9BE2B287EB97800F0B745 /* dataStoreMarkFavouriteFailed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9BE2A287EB97800F0B745 /* dataStoreMarkFavouriteFailed.swift */; };
 		3BD9BE2D287EBA2B00F0B745 /* nortificationKey2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9BE2C287EBA2B00F0B745 /* nortificationKey2.swift */; };
+		3BE22280288B9F0B00B22E59 /* dataStorePlayVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2227F288B9F0B00B22E59 /* dataStorePlayVideo.swift */; };
+		3BE22282288B9F3400B22E59 /* PlayVideoStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE22281288B9F3400B22E59 /* PlayVideoStruct.swift */; };
 		6331207A28357B510042220E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6331207928357B510042220E /* AppDelegate.swift */; };
 		6331207C28357B510042220E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6331207B28357B510042220E /* SceneDelegate.swift */; };
 		6331208128357B510042220E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6331207F28357B510042220E /* Main.storyboard */; };
@@ -65,6 +68,8 @@
 		3BD9BE24287E478A00F0B745 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "INFO-6131-project/Base.lproj/Favorite.storyboard"; sourceTree = "<group>"; };
 		3BD9BE2A287EB97800F0B745 /* dataStoreMarkFavouriteFailed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStoreMarkFavouriteFailed.swift; sourceTree = "<group>"; };
 		3BD9BE2C287EBA2B00F0B745 /* nortificationKey2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nortificationKey2.swift; sourceTree = "<group>"; };
+		3BE2227F288B9F0B00B22E59 /* dataStorePlayVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStorePlayVideo.swift; sourceTree = "<group>"; };
+		3BE22281288B9F3400B22E59 /* PlayVideoStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayVideoStruct.swift; sourceTree = "<group>"; };
 		6331207628357B510042220E /* INFO-6131-project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "INFO-6131-project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6331207928357B510042220E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6331207B28357B510042220E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B8B31DE288BCD5500577CF7 /* XCDYouTubeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +118,7 @@
 				3B5E20F3283BA094009BF2F2 /* MovieDetailView.swift */,
 				3B5E20F5283BA44C009BF2F2 /* MovieDetailStruct.swift */,
 				3B07EE25284C96460003B172 /* dataStoreMovieDetailView.swift */,
+				3BE22283288B9F3800B22E59 /* PlayVideo */,
 				3BD9BE1C287D715700F0B745 /* Director */,
 				3BD9BE1B287D714500F0B745 /* MarkFavourite */,
 			);
@@ -149,6 +156,15 @@
 				3B28F7E8284F9EA3003CCAC6 /* dataStoreDirector.swift */,
 			);
 			path = Director;
+			sourceTree = "<group>";
+		};
+		3BE22283288B9F3800B22E59 /* PlayVideo */ = {
+			isa = PBXGroup;
+			children = (
+				3BE22281288B9F3400B22E59 /* PlayVideoStruct.swift */,
+				3BE2227F288B9F0B00B22E59 /* dataStorePlayVideo.swift */,
+			);
+			path = PlayVideo;
 			sourceTree = "<group>";
 		};
 		6331206D28357B510042220E = {
@@ -203,6 +219,9 @@
 			dependencies = (
 			);
 			name = "INFO-6131-project";
+			packageProductDependencies = (
+				3B8B31DD288BCD5500577CF7 /* XCDYouTubeKit */,
+			);
 			productName = "INFO-6131-project";
 			productReference = 6331207628357B510042220E /* INFO-6131-project.app */;
 			productType = "com.apple.product-type.application";
@@ -231,6 +250,9 @@
 				Base,
 			);
 			mainGroup = 6331206D28357B510042220E;
+			packageReferences = (
+				3B8B31DC288BCD5500577CF7 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */,
+			);
 			productRefGroup = 6331207728357B510042220E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,10 +287,12 @@
 				3BD9BE05287CD3CE00F0B745 /* ItemFavouriteCollectionCollectionViewCell.swift in Sources */,
 				3BD9BE18287D70EF00F0B745 /* dataStoreMarkFavourite.swift in Sources */,
 				3B5E20F4283BA095009BF2F2 /* MovieDetailView.swift in Sources */,
+				3BE22282288B9F3400B22E59 /* PlayVideoStruct.swift in Sources */,
 				3B07EE26284C96460003B172 /* dataStoreMovieDetailView.swift in Sources */,
 				3B07EE2F284DC8A30003B172 /* SearchViewStruct.swift in Sources */,
 				3BD9BE2D287EBA2B00F0B745 /* nortificationKey2.swift in Sources */,
 				3B07EE24284C73290003B172 /* dataStore.swift in Sources */,
+				3BE22280288B9F0B00B22E59 /* dataStorePlayVideo.swift in Sources */,
 				3BD9BE1E287D74BF00F0B745 /* markFavouriteStruct.swift in Sources */,
 				3BD9BE16287CE61E00F0B745 /* favouriteStruct.swift in Sources */,
 				3BD9BE03287CC8FA00F0B745 /* favouriteMoviesViewController.swift in Sources */,
@@ -518,6 +542,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B8B31DC288BCD5500577CF7 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/0xced/XCDYouTubeKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B8B31DD288BCD5500577CF7 /* XCDYouTubeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B8B31DC288BCD5500577CF7 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */;
+			productName = XCDYouTubeKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6331206E28357B510042220E /* Project object */;
 }
