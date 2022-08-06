@@ -13,6 +13,7 @@
 		3B07EE2A284DC6690003B172 /* dataStoreSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07EE29284DC6690003B172 /* dataStoreSearchViewController.swift */; };
 		3B07EE2F284DC8A30003B172 /* SearchViewStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B07EE2E284DC8A30003B172 /* SearchViewStruct.swift */; };
 		3B07EE35284E88B10003B172 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B07EE33284E88B10003B172 /* Search.storyboard */; };
+		3B2557D128933242000BAFDE /* XCDYouTubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B2557D028933242000BAFDE /* XCDYouTubeKit */; };
 		3B28F7E9284F9EA3003CCAC6 /* dataStoreDirector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B28F7E8284F9EA3003CCAC6 /* dataStoreDirector.swift */; };
 		3B28F7EB284F9EBF003CCAC6 /* DirectorStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B28F7EA284F9EBF003CCAC6 /* DirectorStruct.swift */; };
 		3B5E20EE283A0282009BF2F2 /* GridCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E20ED283A0282009BF2F2 /* GridCollectionViewController.swift */; };
@@ -21,6 +22,7 @@
 		3B5E20F4283BA095009BF2F2 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E20F3283BA094009BF2F2 /* MovieDetailView.swift */; };
 		3B5E20F6283BA44C009BF2F2 /* MovieDetailStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E20F5283BA44C009BF2F2 /* MovieDetailStruct.swift */; };
 		3B5E20F8283BAACD009BF2F2 /* Movie Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5E20F7283BAACD009BF2F2 /* Movie Detail.storyboard */; };
+		3B600F3D289E9EB90053816A /* XCDYouTubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B600F3C289E9EB90053816A /* XCDYouTubeKit */; };
 		3B8B31DE288BCD5500577CF7 /* XCDYouTubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B8B31DD288BCD5500577CF7 /* XCDYouTubeKit */; };
 		3BD9BE03287CC8FA00F0B745 /* favouriteMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9BE02287CC8FA00F0B745 /* favouriteMoviesViewController.swift */; };
 		3BD9BE05287CD3CE00F0B745 /* ItemFavouriteCollectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9BE04287CD3CE00F0B745 /* ItemFavouriteCollectionCollectionViewCell.swift */; };
@@ -57,6 +59,7 @@
 		3B5E20F3283BA094009BF2F2 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		3B5E20F5283BA44C009BF2F2 /* MovieDetailStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailStruct.swift; sourceTree = "<group>"; };
 		3B5E20F7283BAACD009BF2F2 /* Movie Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Movie Detail.storyboard"; sourceTree = "<group>"; };
+		3B600F3E289EA0880053816A /* INFO-6131-project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "INFO-6131-project.entitlements"; sourceTree = "<group>"; };
 		3BD9BE02287CC8FA00F0B745 /* favouriteMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favouriteMoviesViewController.swift; sourceTree = "<group>"; };
 		3BD9BE04287CD3CE00F0B745 /* ItemFavouriteCollectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFavouriteCollectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BD9BE06287CD41900F0B745 /* dataStoreFavourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStoreFavourite.swift; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B8B31DE288BCD5500577CF7 /* XCDYouTubeKit in Frameworks */,
+				3B2557D128933242000BAFDE /* XCDYouTubeKit in Frameworks */,
+				3B600F3D289E9EB90053816A /* XCDYouTubeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +191,7 @@
 		6331207828357B510042220E /* INFO-6131-project */ = {
 			isa = PBXGroup;
 			children = (
+				3B600F3E289EA0880053816A /* INFO-6131-project.entitlements */,
 				6331207928357B510042220E /* AppDelegate.swift */,
 				6331207B28357B510042220E /* SceneDelegate.swift */,
 				6331207F28357B510042220E /* Main.storyboard */,
@@ -221,6 +227,8 @@
 			name = "INFO-6131-project";
 			packageProductDependencies = (
 				3B8B31DD288BCD5500577CF7 /* XCDYouTubeKit */,
+				3B2557D028933242000BAFDE /* XCDYouTubeKit */,
+				3B600F3C289E9EB90053816A /* XCDYouTubeKit */,
 			);
 			productName = "INFO-6131-project";
 			productReference = 6331207628357B510042220E /* INFO-6131-project.app */;
@@ -252,6 +260,8 @@
 			mainGroup = 6331206D28357B510042220E;
 			packageReferences = (
 				3B8B31DC288BCD5500577CF7 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */,
+				3B2557CF28933242000BAFDE /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */,
+				3B600F3B289E9EB90053816A /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */,
 			);
 			productRefGroup = 6331207728357B510042220E /* Products */;
 			projectDirPath = "";
@@ -471,13 +481,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "INFO-6131-project/INFO-6131-project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4VXT9B3AV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "INFO-6131-project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -487,6 +500,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.dibanez.INFO-6131-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -498,13 +512,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "INFO-6131-project/INFO-6131-project.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D4VXT9B3AV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "INFO-6131-project/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -514,6 +531,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.dibanez.INFO-6131-project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -544,6 +562,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3B2557CF28933242000BAFDE /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/0xced/XCDYouTubeKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		3B600F3B289E9EB90053816A /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/0xced/XCDYouTubeKit.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		3B8B31DC288BCD5500577CF7 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/0xced/XCDYouTubeKit.git";
@@ -555,6 +589,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3B2557D028933242000BAFDE /* XCDYouTubeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B8B31DC288BCD5500577CF7 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */;
+			productName = XCDYouTubeKit;
+		};
+		3B600F3C289E9EB90053816A /* XCDYouTubeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B8B31DC288BCD5500577CF7 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */;
+			productName = XCDYouTubeKit;
+		};
 		3B8B31DD288BCD5500577CF7 /* XCDYouTubeKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3B8B31DC288BCD5500577CF7 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */;

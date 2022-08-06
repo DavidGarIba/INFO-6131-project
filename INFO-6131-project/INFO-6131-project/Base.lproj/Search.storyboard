@@ -47,7 +47,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVN-yX-BMI">
-                                <rect key="frame" x="347" y="44" width="67" height="80"/>
+                                <rect key="frame" x="347" y="36" width="67" height="80"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Clear"/>
                                 <connections>
@@ -64,13 +64,19 @@
                             <constraint firstItem="rVN-yX-BMI" firstAttribute="leading" secondItem="vm6-aD-HTo" secondAttribute="leading" constant="347" id="Re2-ry-8OK"/>
                             <constraint firstItem="DDx-Gw-ncq" firstAttribute="leading" secondItem="vm6-aD-HTo" secondAttribute="leading" id="UvG-a5-lEz"/>
                             <constraint firstItem="DDx-Gw-ncq" firstAttribute="top" secondItem="o6c-Yc-3ye" secondAttribute="top" id="W2t-OL-gkx"/>
-                            <constraint firstItem="vm6-aD-HTo" firstAttribute="bottom" secondItem="rVN-yX-BMI" secondAttribute="bottom" constant="738" id="g5F-ZZ-Gdf"/>
+                            <constraint firstItem="vm6-aD-HTo" firstAttribute="bottom" secondItem="rVN-yX-BMI" secondAttribute="bottom" constant="746" id="g5F-ZZ-Gdf"/>
                             <constraint firstItem="O8V-tX-DuX" firstAttribute="trailing" secondItem="vm6-aD-HTo" secondAttribute="trailing" id="ggD-Ai-xH5"/>
                             <constraint firstItem="O8V-tX-DuX" firstAttribute="bottom" secondItem="vm6-aD-HTo" secondAttribute="bottom" id="i4z-Vk-3FI"/>
                             <constraint firstItem="O8V-tX-DuX" firstAttribute="leading" secondItem="vm6-aD-HTo" secondAttribute="leading" id="umc-D1-edK"/>
                             <constraint firstItem="O8V-tX-DuX" firstAttribute="top" secondItem="vm6-aD-HTo" secondAttribute="top" id="w00-tx-gC7"/>
-                            <constraint firstItem="rVN-yX-BMI" firstAttribute="top" secondItem="vm6-aD-HTo" secondAttribute="top" id="xwQ-Hd-FLx"/>
+                            <constraint firstItem="rVN-yX-BMI" firstAttribute="top" secondItem="vm6-aD-HTo" secondAttribute="top" constant="-8" id="xwQ-Hd-FLx"/>
                         </constraints>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="8gT-cz-QzJ"/>
+                                <include reference="Re2-ry-8OK"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="4hK-J8-f9x"/>
                     <connections>

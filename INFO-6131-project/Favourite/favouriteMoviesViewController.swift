@@ -81,8 +81,17 @@ class favouriteMoviesViewController: UICollectionViewController {
             switch result {
                 case .success(let result):
                     self.photos = result
-                                    
-                    self.collectionView.collectionViewLayout = self.configLayout()
+                    
+                    let deviceIdiom = UIScreen.main.traitCollection.userInterfaceIdiom
+                    switch deviceIdiom {
+                        case .phone:
+                            self.collectionView.collectionViewLayout = self.configLayout()
+                        case .pad:
+                            self.collectionView.collectionViewLayout = self.configLayoutIpad()
+                        @unknown default:
+                            print("Device is unknow")
+                    }
+                    
                     self.configDataSource(count: result!.total_results)
                     self.collectionView.reloadData()
                 
@@ -106,13 +115,25 @@ class favouriteMoviesViewController: UICollectionViewController {
 
         // dcleare group size
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(1.0))
-
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
-
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 1
+        return UICollectionViewCompositionalLayout(section: section)
+    }
+    
+    private func configLayoutIpad() -> UICollectionViewCompositionalLayout {
+        //declare size of the item
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.8), heightDimension: .fractionalHeight(0.8))
+        //declare the item
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        //give content Insets
+        item.contentInsets = NSDirectionalEdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5)
 
-
+        // dcleare group size
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(0.5))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 4)
+        let section = NSCollectionLayoutSection(group: group)
+        section.interGroupSpacing = 1
         return UICollectionViewCompositionalLayout(section: section)
     }
 
