@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="O8V-tX-DuX">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="787"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="Bet-Wj-eqk">
@@ -46,12 +46,14 @@
                                     <outlet property="delegate" destination="yv5-fJ-NSY" id="GqM-qj-3MF"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVN-yX-BMI">
-                                <rect key="frame" x="347" y="36" width="67" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmy-s3-OCS">
+                                <rect key="frame" x="0.0" y="831" width="414" height="31"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Clear"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout"/>
                                 <connections>
-                                    <action selector="clearBtn:" destination="yv5-fJ-NSY" eventType="touchUpInside" id="lVF-Xv-vQZ"/>
+                                    <action selector="logoutButton:" destination="yv5-fJ-NSY" eventType="touchUpInside" id="M04-eN-cqx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -59,24 +61,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="DDx-Gw-ncq" secondAttribute="bottom" id="7yG-5k-KnT"/>
-                            <constraint firstItem="rVN-yX-BMI" firstAttribute="trailing" secondItem="vm6-aD-HTo" secondAttribute="trailing" id="8gT-cz-QzJ"/>
+                            <constraint firstItem="Cmy-s3-OCS" firstAttribute="bottom" secondItem="vm6-aD-HTo" secondAttribute="bottom" id="8NH-vY-S05"/>
                             <constraint firstItem="DDx-Gw-ncq" firstAttribute="trailing" secondItem="vm6-aD-HTo" secondAttribute="trailing" id="9pe-ql-pOH"/>
-                            <constraint firstItem="rVN-yX-BMI" firstAttribute="leading" secondItem="vm6-aD-HTo" secondAttribute="leading" constant="347" id="Re2-ry-8OK"/>
                             <constraint firstItem="DDx-Gw-ncq" firstAttribute="leading" secondItem="vm6-aD-HTo" secondAttribute="leading" id="UvG-a5-lEz"/>
                             <constraint firstItem="DDx-Gw-ncq" firstAttribute="top" secondItem="o6c-Yc-3ye" secondAttribute="top" id="W2t-OL-gkx"/>
-                            <constraint firstItem="vm6-aD-HTo" firstAttribute="bottom" secondItem="rVN-yX-BMI" secondAttribute="bottom" constant="746" id="g5F-ZZ-Gdf"/>
+                            <constraint firstItem="Cmy-s3-OCS" firstAttribute="top" secondItem="O8V-tX-DuX" secondAttribute="bottom" id="aln-aF-DFh"/>
                             <constraint firstItem="O8V-tX-DuX" firstAttribute="trailing" secondItem="vm6-aD-HTo" secondAttribute="trailing" id="ggD-Ai-xH5"/>
-                            <constraint firstItem="O8V-tX-DuX" firstAttribute="bottom" secondItem="vm6-aD-HTo" secondAttribute="bottom" id="i4z-Vk-3FI"/>
+                            <constraint firstItem="Cmy-s3-OCS" firstAttribute="leading" secondItem="vm6-aD-HTo" secondAttribute="leading" id="hUb-fK-tFM"/>
+                            <constraint firstItem="O8V-tX-DuX" firstAttribute="bottom" secondItem="vm6-aD-HTo" secondAttribute="bottom" constant="-31" id="i4z-Vk-3FI"/>
+                            <constraint firstItem="Cmy-s3-OCS" firstAttribute="trailing" secondItem="vm6-aD-HTo" secondAttribute="trailing" id="jzJ-w4-5SY"/>
                             <constraint firstItem="O8V-tX-DuX" firstAttribute="leading" secondItem="vm6-aD-HTo" secondAttribute="leading" id="umc-D1-edK"/>
                             <constraint firstItem="O8V-tX-DuX" firstAttribute="top" secondItem="vm6-aD-HTo" secondAttribute="top" id="w00-tx-gC7"/>
-                            <constraint firstItem="rVN-yX-BMI" firstAttribute="top" secondItem="vm6-aD-HTo" secondAttribute="top" constant="-8" id="xwQ-Hd-FLx"/>
                         </constraints>
-                        <variation key="heightClass=regular">
-                            <mask key="constraints">
-                                <include reference="8gT-cz-QzJ"/>
-                                <include reference="Re2-ry-8OK"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="4hK-J8-f9x"/>
                     <connections>
@@ -94,6 +90,9 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SearchViewController: UIViewController {
 
@@ -25,16 +26,28 @@ class SearchViewController: UIViewController {
             customSearchController()
      
         }
+    
+    @IBAction func logoutButton(_ sender: UIButton) {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            NotificationCenter.default.post(name: Notification.Name(rawValue: notificationKey3), object: nil)
+        }
+        catch let signOutError as NSError
+        {
+            print("Error signing out: %@", signOutError)
+        }
+            dismiss(animated: true)
+    }
+    
+    
     func Alert(Content: String){
         let alert = UIAlertController(title: "Alert Title", message: "\(Content)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBAction func clearBtn(_ sender: UIButton) {
-        searchController.searchBar.text = ""
-        self.tableView.reloadData()
-    }
+  
     
     private func fetchData(queryString: String) {
         DataStoreSearchViewController.getData( hostURl:"api.themoviedb.org" ,path: "/3/search/movie", params: ["query" : "\(queryString)"], completion: { (result) in
@@ -63,8 +76,10 @@ class SearchViewController: UIViewController {
             searchController.dimsBackgroundDuringPresentation = false
             definesPresentationContext = true
             tableView.tableHeaderView = searchController.searchBar
-            searchController.searchBar.tintColor = .white
+            searchController.searchBar.tintColor = .black
+            
             searchController.searchBar.showsCancelButton = true
+            
             searchController.searchBar.placeholder = "Please Enter Movie Name"
         }
     

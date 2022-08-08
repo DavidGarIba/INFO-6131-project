@@ -23,6 +23,11 @@
 		3B5E20F6283BA44C009BF2F2 /* MovieDetailStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5E20F5283BA44C009BF2F2 /* MovieDetailStruct.swift */; };
 		3B5E20F8283BAACD009BF2F2 /* Movie Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B5E20F7283BAACD009BF2F2 /* Movie Detail.storyboard */; };
 		3B600F3D289E9EB90053816A /* XCDYouTubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B600F3C289E9EB90053816A /* XCDYouTubeKit */; };
+		3B600F4228A152840053816A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B600F4028A152840053816A /* Login.storyboard */; };
+		3B600F4428A152D90053816A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B600F4328A152D90053816A /* LoginViewController.swift */; };
+		3B600F4628A154710053816A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B600F4528A154710053816A /* GoogleService-Info.plist */; };
+		3B600F4928A154FA0053816A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3B600F4828A154FA0053816A /* FirebaseAuth */; };
+		3B600F4B28A154FA0053816A /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 3B600F4A28A154FA0053816A /* FirebaseAuthCombine-Community */; };
 		3B8B31DE288BCD5500577CF7 /* XCDYouTubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 3B8B31DD288BCD5500577CF7 /* XCDYouTubeKit */; };
 		3BD9BE03287CC8FA00F0B745 /* favouriteMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9BE02287CC8FA00F0B745 /* favouriteMoviesViewController.swift */; };
 		3BD9BE05287CD3CE00F0B745 /* ItemFavouriteCollectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD9BE04287CD3CE00F0B745 /* ItemFavouriteCollectionCollectionViewCell.swift */; };
@@ -60,6 +65,9 @@
 		3B5E20F5283BA44C009BF2F2 /* MovieDetailStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailStruct.swift; sourceTree = "<group>"; };
 		3B5E20F7283BAACD009BF2F2 /* Movie Detail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Movie Detail.storyboard"; sourceTree = "<group>"; };
 		3B600F3E289EA0880053816A /* INFO-6131-project.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "INFO-6131-project.entitlements"; sourceTree = "<group>"; };
+		3B600F4128A152840053816A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "INFO-6131-project/List/Base.lproj/Login.storyboard"; sourceTree = "<group>"; };
+		3B600F4328A152D90053816A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3B600F4528A154710053816A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3BD9BE02287CC8FA00F0B745 /* favouriteMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favouriteMoviesViewController.swift; sourceTree = "<group>"; };
 		3BD9BE04287CD3CE00F0B745 /* ItemFavouriteCollectionCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemFavouriteCollectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		3BD9BE06287CD41900F0B745 /* dataStoreFavourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dataStoreFavourite.swift; sourceTree = "<group>"; };
@@ -90,15 +98,27 @@
 				3B8B31DE288BCD5500577CF7 /* XCDYouTubeKit in Frameworks */,
 				3B2557D128933242000BAFDE /* XCDYouTubeKit in Frameworks */,
 				3B600F3D289E9EB90053816A /* XCDYouTubeKit in Frameworks */,
+				3B600F4928A154FA0053816A /* FirebaseAuth in Frameworks */,
+				3B600F4B28A154FA0053816A /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B600F3F28A152550053816A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3B600F4028A152840053816A /* Login.storyboard */,
+				3B600F4328A152D90053816A /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		3BD9BE11287CE4C400F0B745 /* Favourite */ = {
 			isa = PBXGroup;
 			children = (
+				3BD9BE23287E478A00F0B745 /* Favorite.storyboard */,
 				3BD9BE02287CC8FA00F0B745 /* favouriteMoviesViewController.swift */,
 				3BD9BE04287CD3CE00F0B745 /* ItemFavouriteCollectionCollectionViewCell.swift */,
 				3BD9BE06287CD41900F0B745 /* dataStoreFavourite.swift */,
@@ -110,6 +130,7 @@
 		3BD9BE12287CE4F900F0B745 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				3B07EE33284E88B10003B172 /* Search.storyboard */,
 				3B07EE27284DC5B30003B172 /* SearchViewController.swift */,
 				3B07EE29284DC6690003B172 /* dataStoreSearchViewController.swift */,
 				3B07EE2E284DC8A30003B172 /* SearchViewStruct.swift */,
@@ -120,6 +141,7 @@
 		3BD9BE13287CE52600F0B745 /* Details */ = {
 			isa = PBXGroup;
 			children = (
+				3B5E20F7283BAACD009BF2F2 /* Movie Detail.storyboard */,
 				3B5E20F3283BA094009BF2F2 /* MovieDetailView.swift */,
 				3B5E20F5283BA44C009BF2F2 /* MovieDetailStruct.swift */,
 				3B07EE25284C96460003B172 /* dataStoreMovieDetailView.swift */,
@@ -133,6 +155,7 @@
 		3BD9BE14287CE55600F0B745 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				6331207F28357B510042220E /* Main.storyboard */,
 				3B5E20ED283A0282009BF2F2 /* GridCollectionViewController.swift */,
 				3B5E20F1283A87FA009BF2F2 /* Photo.swift */,
 				3B07EE23284C73290003B172 /* dataStore.swift */,
@@ -191,16 +214,14 @@
 		6331207828357B510042220E /* INFO-6131-project */ = {
 			isa = PBXGroup;
 			children = (
+				3B600F4528A154710053816A /* GoogleService-Info.plist */,
 				3B600F3E289EA0880053816A /* INFO-6131-project.entitlements */,
 				6331207928357B510042220E /* AppDelegate.swift */,
 				6331207B28357B510042220E /* SceneDelegate.swift */,
-				6331207F28357B510042220E /* Main.storyboard */,
-				3BD9BE23287E478A00F0B745 /* Favorite.storyboard */,
-				3B5E20F7283BAACD009BF2F2 /* Movie Detail.storyboard */,
-				3B07EE33284E88B10003B172 /* Search.storyboard */,
 				6331208428357B520042220E /* LaunchScreen.storyboard */,
 				6331208228357B520042220E /* Assets.xcassets */,
 				6331208728357B520042220E /* Info.plist */,
+				3B600F3F28A152550053816A /* Login */,
 				3BD9BE14287CE55600F0B745 /* List */,
 				3BD9BE13287CE52600F0B745 /* Details */,
 				3BD9BE12287CE4F900F0B745 /* Search */,
@@ -229,6 +250,8 @@
 				3B8B31DD288BCD5500577CF7 /* XCDYouTubeKit */,
 				3B2557D028933242000BAFDE /* XCDYouTubeKit */,
 				3B600F3C289E9EB90053816A /* XCDYouTubeKit */,
+				3B600F4828A154FA0053816A /* FirebaseAuth */,
+				3B600F4A28A154FA0053816A /* FirebaseAuthCombine-Community */,
 			);
 			productName = "INFO-6131-project";
 			productReference = 6331207628357B510042220E /* INFO-6131-project.app */;
@@ -262,6 +285,7 @@
 				3B8B31DC288BCD5500577CF7 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */,
 				3B2557CF28933242000BAFDE /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */,
 				3B600F3B289E9EB90053816A /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */,
+				3B600F4728A154FA0053816A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 6331207728357B510042220E /* Products */;
 			projectDirPath = "";
@@ -278,7 +302,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6331208628357B520042220E /* LaunchScreen.storyboard in Resources */,
+				3B600F4628A154710053816A /* GoogleService-Info.plist in Resources */,
 				3B5E20F8283BAACD009BF2F2 /* Movie Detail.storyboard in Resources */,
+				3B600F4228A152840053816A /* Login.storyboard in Resources */,
 				3BD9BE25287E478A00F0B745 /* Favorite.storyboard in Resources */,
 				6331208328357B520042220E /* Assets.xcassets in Resources */,
 				6331208128357B510042220E /* Main.storyboard in Resources */,
@@ -293,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B600F4428A152D90053816A /* LoginViewController.swift in Sources */,
 				3B07EE28284DC5B30003B172 /* SearchViewController.swift in Sources */,
 				3BD9BE05287CD3CE00F0B745 /* ItemFavouriteCollectionCollectionViewCell.swift in Sources */,
 				3BD9BE18287D70EF00F0B745 /* dataStoreMarkFavourite.swift in Sources */,
@@ -331,6 +358,14 @@
 				3B07EE34284E88B10003B172 /* Base */,
 			);
 			name = Search.storyboard;
+			sourceTree = "<group>";
+		};
+		3B600F4028A152840053816A /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B600F4128A152840053816A /* Base */,
+			);
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		3BD9BE23287E478A00F0B745 /* Favorite.storyboard */ = {
@@ -578,6 +613,14 @@
 				kind = branch;
 			};
 		};
+		3B600F4728A154FA0053816A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		3B8B31DC288BCD5500577CF7 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/0xced/XCDYouTubeKit.git";
@@ -598,6 +641,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3B8B31DC288BCD5500577CF7 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */;
 			productName = XCDYouTubeKit;
+		};
+		3B600F4828A154FA0053816A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B600F4728A154FA0053816A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3B600F4A28A154FA0053816A /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B600F4728A154FA0053816A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
 		};
 		3B8B31DD288BCD5500577CF7 /* XCDYouTubeKit */ = {
 			isa = XCSwiftPackageProductDependency;
